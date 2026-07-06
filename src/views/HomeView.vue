@@ -22,7 +22,7 @@
 
       <!-- Right: mascot -->
       <div class="mascot-wrap" data-mascot>
-        <div class="speech-bubble" style="animation:bobc 3.6s ease-in-out infinite">hey.</div>
+        <div class="speech-bubble" style="animation:bobc 3.6s ease-in-out infinite">Awe.</div>
         <!-- lightbulb doodle -->
         <svg viewBox="0 0 70 90" width="66" style="position:absolute;left:8px;bottom:150px;z-index:4;animation:bobc 5s ease-in-out infinite" aria-hidden="true">
           <g filter="url(#doodle)" fill="none" style="stroke:var(--ink)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
