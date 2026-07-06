@@ -1,0 +1,266 @@
+/* =========================================================================
+   Synthesis Software Technologies — Design Tokens
+   Source: "S7S Dark Brand Kit" theme, extracted from
+   "Synthesis AI Assisted Dev_Vivo_Apr2026.pptx"
+   ========================================================================= */
+
+/* -------------------------------------------------------------------------
+   FONTS
+   The brand deck uses Aptos Display (headings) and Aptos (body) — Microsoft's
+   Office 2024 default. These are not freely web-licensed. Substituting the
+   nearest open match: Inter Tight (display) and Inter (body) which share
+   Aptos's geometric humanist sans skeleton, neutral apertures, and a similar
+   x-height. ★ FLAG: please supply licensed Aptos webfonts to drop in here.
+   ------------------------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  /* ============ COLOR — BRAND CORE ============
+     The deck runs on a near-black ground (#130F0D, very warm-tinted) with
+     a vivid 6-stop accent ribbon that's used for icons, glow rims, and
+     callout outlines. Light surfaces are nearly-white (#F3F3F0) — never
+     pure white in dark mode. */
+
+  /* Foundation — backgrounds & ink */
+  --c-ink:           #130F0D;  /* dk1 — primary surface in dark mode */
+  --c-ink-90:        #1B1816;  /* card / raised surface */
+  --c-ink-80:        #2A2522;  /* hairline borders on dark */
+  --c-ink-60:        #4A4440;  /* tertiary divider */
+  --c-paper:         #FFFFFF;  /* lt1 — pure white, used sparingly */
+  --c-paper-soft:    #F3F3F0;  /* lt2 — preferred light surface */
+  --c-paper-muted:   #E8E6E0;  /* secondary light surface */
+  --c-mute:          #616167;  /* dk2 — neutral grey, secondary text */
+
+  /* Accent ribbon — the 6 brand accents, in deck order. Used for:
+     glow outlines on callouts, icon fills, pillar markers, dividers. */
+  --c-accent-purple: #B841FB;  /* accent1 — primary "spark" color */
+  --c-accent-blue:   #7D93FC;  /* accent2 */
+  --c-accent-indigo: #7E68FE;  /* accent3 */
+  --c-accent-cyan:   #59FFF5;  /* accent4 — most-used accent for icons */
+  --c-accent-pink:   #F966B4;  /* accent5 */
+  --c-accent-sky:    #5AC6FF;  /* accent6 */
+
+  /* Links */
+  --c-link:          #57D2BE;  /* hlink — desaturated cyan for body links */
+  --c-link-visited:  #D092CC;  /* folHlink */
+
+  /* Heat / status (derived — semantic only, not in source theme) */
+  --c-positive:      #59FFF5;  /* same as accent-cyan, used for "moving toward" */
+  --c-warning:       #F966B4;
+  --c-critical:      #FF6B6B;  /* derived */
+
+  /* ============ SEMANTIC SURFACES & TEXT ============ */
+  --bg:              var(--c-ink);
+  --bg-elevated:     var(--c-ink-90);
+  --bg-light:        var(--c-paper-soft);
+
+  --fg:              var(--c-paper-soft);    /* primary text on dark */
+  --fg-muted:        #B6B4AF;                /* secondary text on dark */
+  --fg-dim:          #8C8985;                /* tertiary / metadata */
+  --fg-on-light:     var(--c-ink);
+  --fg-muted-on-light: #4A4440;
+
+  --border:          rgba(243, 243, 240, 0.10); /* hairline on dark */
+  --border-strong:   rgba(243, 243, 240, 0.18);
+  --border-on-light: rgba(19, 15, 13, 0.08);
+
+  /* ============ TYPE — RAW STACKS ============ */
+  --font-display: "Inter Tight", "Aptos Display", system-ui, -apple-system, sans-serif;
+  --font-body:    "Inter", "Aptos", system-ui, -apple-system, sans-serif;
+  --font-mono:    "JetBrains Mono", "Cascadia Code", ui-monospace, Menlo, monospace;
+
+  /* Type scale (1.25 minor third, anchored at 16px) */
+  --fs-12: 0.75rem;     --fs-14: 0.875rem;
+  --fs-16: 1rem;        --fs-18: 1.125rem;
+  --fs-20: 1.25rem;     --fs-24: 1.5rem;
+  --fs-28: 1.75rem;     --fs-32: 2rem;
+  --fs-40: 2.5rem;      --fs-48: 3rem;
+  --fs-64: 4rem;        --fs-80: 5rem;
+  --fs-96: 6rem;
+
+  --fw-regular: 400; --fw-medium: 500;
+  --fw-semibold: 600; --fw-bold: 700; --fw-black: 800;
+
+  --lh-tight: 1.05;  --lh-snug: 1.2;
+  --lh-base:  1.45;  --lh-loose: 1.65;
+
+  --tracking-tight:  -0.02em;
+  --tracking-normal: 0;
+  --tracking-wide:   0.04em;
+  --tracking-eyebrow: 0.18em;   /* the ALL-CAPS LABELS in the deck */
+
+  /* ============ SPACING ============ */
+  --s-2: 2px;   --s-4: 4px;   --s-6: 6px;
+  --s-8: 8px;   --s-12: 12px; --s-16: 16px;
+  --s-20: 20px; --s-24: 24px; --s-32: 32px;
+  --s-40: 40px; --s-48: 48px; --s-64: 64px;
+  --s-80: 80px; --s-96: 96px; --s-128: 128px;
+
+  /* ============ RADIUS ============
+     The deck mostly uses generously rounded rectangles — 16-24px on cards,
+     full pills on tags. Slide containers themselves are sharp. */
+  --r-sm: 6px;  --r-md: 12px;
+  --r-lg: 18px; --r-xl: 24px;
+  --r-2xl: 32px;
+  --r-pill: 999px;
+
+  /* ============ SHADOWS / GLOWS ============
+     The brand's signature effect is the "neon outline" — a 2px stroke in
+     an accent color with a soft outer glow at 30-40% opacity. No drop
+     shadows on the cover; soft elevation shadows on light-mode cards. */
+  --glow-purple: 0 0 24px rgba(184, 65, 251, 0.35), 0 0 64px rgba(184, 65, 251, 0.18);
+  --glow-cyan:   0 0 24px rgba(89, 255, 245, 0.35), 0 0 64px rgba(89, 255, 245, 0.18);
+  --glow-pink:   0 0 24px rgba(249, 102, 180, 0.35), 0 0 64px rgba(249, 102, 180, 0.18);
+  --glow-blue:   0 0 24px rgba(125, 147, 252, 0.35), 0 0 64px rgba(125, 147, 252, 0.18);
+
+  --shadow-card:    0 1px 2px rgba(19, 15, 13, 0.06), 0 8px 24px rgba(19, 15, 13, 0.08);
+  --shadow-elevated: 0 4px 12px rgba(19, 15, 13, 0.10), 0 24px 64px rgba(19, 15, 13, 0.18);
+
+  /* ============ GRADIENTS ============
+     The slide master uses a subtle radial vignette on dk1, running from
+     #130F0D at center to ~#0B0907 at corners. Pillar dividers use linear
+     accent-to-transparent fades. */
+  --grad-stage:
+    radial-gradient(ellipse at 50% 40%, #1B1815 0%, #130F0D 55%, #0B0907 100%);
+  --grad-rule-purple:
+    linear-gradient(90deg, transparent 0%, var(--c-accent-purple) 50%, transparent 100%);
+  --grad-rule-cyan:
+    linear-gradient(90deg, transparent 0%, var(--c-accent-cyan) 50%, transparent 100%);
+  --grad-spectrum:
+    linear-gradient(90deg,
+      var(--c-accent-purple) 0%,
+      var(--c-accent-pink) 22%,
+      var(--c-accent-indigo) 44%,
+      var(--c-accent-blue) 64%,
+      var(--c-accent-sky) 82%,
+      var(--c-accent-cyan) 100%);
+}
+
+/* =========================================================================
+   SEMANTIC TYPE STYLES
+   Mapped to deck conventions: tight tracking on big display, wide on
+   eyebrows, body at 1.45 line-height in muted off-white.
+   ========================================================================= */
+
+.t-display-xl { /* slide titles like "Value Based Approach" */
+  font-family: var(--font-display);
+  font-weight: var(--fw-bold);
+  font-size: clamp(3rem, 5.5vw, var(--fs-96));
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-tight);
+  color: var(--fg);
+}
+
+.t-display-lg {
+  font-family: var(--font-display);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-64);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-tight);
+}
+
+.t-h1 {
+  font-family: var(--font-display);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-48);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--tracking-tight);
+}
+
+.t-h2 {
+  font-family: var(--font-display);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-32);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--tracking-tight);
+}
+
+.t-h3 {
+  font-family: var(--font-display);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-24);
+  line-height: var(--lh-snug);
+}
+
+.t-h4 {
+  font-family: var(--font-body);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-18);
+  line-height: var(--lh-snug);
+}
+
+.t-eyebrow {
+  /* "THE TENSION", "WHAT IS A VALUE DROP?", etc — the deck's most
+     distinctive type treatment. Always uppercase, wide-tracked, an
+     accent color. */
+  font-family: var(--font-body);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-12);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-eyebrow);
+  color: var(--c-accent-cyan);
+}
+
+.t-body {
+  font-family: var(--font-body);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-16);
+  line-height: var(--lh-base);
+  color: var(--fg);
+}
+
+.t-body-lg {
+  font-family: var(--font-body);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-20);
+  line-height: var(--lh-loose);
+  color: var(--fg);
+}
+
+.t-body-sm {
+  font-family: var(--font-body);
+  font-size: var(--fs-14);
+  line-height: var(--lh-base);
+  color: var(--fg-muted);
+}
+
+.t-meta {
+  font-family: var(--font-body);
+  font-size: var(--fs-12);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--fg-dim);
+}
+
+.t-num {
+  /* Step numbers, statistics — the deck uses oversized, semi-bold
+     numerals against an accent color. */
+  font-family: var(--font-display);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-64);
+  line-height: 1;
+  letter-spacing: var(--tracking-tight);
+}
+
+.t-quote {
+  font-family: var(--font-display);
+  font-weight: var(--fw-medium);
+  font-size: var(--fs-32);
+  line-height: var(--lh-snug);
+  font-style: italic;
+}
+
+.t-mono {
+  font-family: var(--font-mono);
+  font-size: var(--fs-14);
+}
+
+/* Default body baseline if used as stylesheet on a page */
+body.synthesis-base {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: var(--fs-16);
+  line-height: var(--lh-base);
+  -webkit-font-smoothing: antialiased;
+}

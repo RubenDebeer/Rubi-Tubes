@@ -1,0 +1,122 @@
+/* ============================================================
+   THEME TOKENS
+   ============================================================ */
+:root {
+  --bg: #FBFAF7;
+  --surface: #ffffff;
+  --ink: #130F0D;
+  --ink-2: #4A4440;
+  --ink-3: #9a968f;
+  --hair: rgba(19,15,13,.10);
+  --dot: rgba(19,15,13,.06);
+  --nav: rgba(251,250,247,.85);
+
+  /* accents */
+  --c-accent-purple: #B841FB;
+  --c-accent-pink: #F966B4;
+  --c-accent-sky: #5AC6FF;
+
+  /* type */
+  --font-display: "Inter Tight", "Aptos Display", system-ui, -apple-system, sans-serif;
+  --font-body: "Inter", "Aptos", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", "Cascadia Code", ui-monospace, Menlo, monospace;
+
+  --tracking-eyebrow: 0.18em;
+}
+
+html.theme-dark {
+  --bg: #130F0D;
+  --surface: #1B1816;
+  --ink: #F3F3F0;
+  --ink-2: #B8B4AE;
+  --ink-3: #8C8985;
+  --hair: rgba(243,243,240,.12);
+  --dot: rgba(243,243,240,.06);
+  --nav: rgba(19,15,13,.82);
+}
+
+/* ============================================================
+   BASE RESET
+   ============================================================ */
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  background: var(--bg);
+  transition: background .35s ease;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  transition: background .35s ease, color .35s ease;
+}
+
+a { -webkit-tap-highlight-color: transparent; }
+
+/* ============================================================
+   THEME TOGGLE ICON VISIBILITY
+   ============================================================ */
+[data-theme-toggle] .icon-sun { display: none; }
+[data-theme-toggle] .icon-moon { display: inline-flex; }
+html.theme-dark [data-theme-toggle] .icon-sun { display: inline-flex; }
+html.theme-dark [data-theme-toggle] .icon-moon { display: none; }
+
+/* ============================================================
+   ANIMATIONS
+   ============================================================ */
+@keyframes bobc {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+@keyframes bobs {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  @keyframes bobc { 0%, 100% { transform: translateY(0); } }
+  @keyframes bobs { 0%, 100% { transform: translateY(0); } }
+  svg animate, svg animateTransform { display: none; }
+}
+
+/* ============================================================
+   PROSE (article pages)
+   ============================================================ */
+.prose p {
+  font-size: 19px;
+  line-height: 1.7;
+  color: var(--ink);
+  margin: 0 0 22px;
+}
+.prose h2 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 28px;
+  letter-spacing: -.02em;
+  margin: 40px 0 14px;
+  color: var(--ink);
+}
+.prose strong { font-weight: 700; }
+.prose em { font-style: italic; }
+.prose code {
+  font-family: var(--font-mono);
+  font-size: .9em;
+  background: rgba(19,15,13,.06);
+  border-radius: 6px;
+  padding: 2px 7px;
+}
+html.theme-dark .prose code {
+  background: rgba(243,243,240,.08);
+}
+
+/* ============================================================
+   FOCUS STYLES
+   ============================================================ */
+:focus-visible {
+  outline: 2px solid var(--c-accent-purple);
+  outline-offset: 3px;
+  border-radius: 4px;
+}

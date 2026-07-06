@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/synthesis-design-system-3b250a90-79d2-4bf4-b577-3991ac7d3a97/colors_and_type.css">
+<script src="_ds/synthesis-design-system-3b250a90-79d2-4bf4-b577-3991ac7d3a97/_ds_bundle.js"></script>
+<style>
+  :root{--bg:#FBFAF7;--surface:#ffffff;--ink:#130F0D;--ink-2:#4A4440;--ink-3:#9a968f;--hair:rgba(19,15,13,.10);--dot:rgba(19,15,13,.06);--nav:rgba(251,250,247,.85)}
+  html.theme-dark{--bg:#130F0D;--surface:#1B1816;--ink:#F3F3F0;--ink-2:#B8B4AE;--ink-3:#8C8985;--hair:rgba(243,243,240,.12);--dot:rgba(243,243,240,.06);--nav:rgba(19,15,13,.82)}
+  html{background:var(--bg);transition:background .35s ease}
+  body{margin:0;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;font-family:var(--font-body);transition:background .35s ease,color .35s ease}
+  [data-theme-toggle] .icon-sun{display:none}
+  [data-theme-toggle] .icon-moon{display:inline-flex}
+  html.theme-dark [data-theme-toggle] .icon-sun{display:inline-flex}
+  html.theme-dark [data-theme-toggle] .icon-moon{display:none}
+  a{-webkit-tap-highlight-color:transparent}
+  @keyframes bobc{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+</style>
+<script>
+(function(){
+  var el=document.documentElement;
+  try{ if(localStorage.getItem('rd-theme')==='dark') el.classList.add('theme-dark'); }catch(e){}
+  if(!window.__rdTheme){ window.__rdTheme=true;
+    document.addEventListener('click', function(e){
+      var b=e.target.closest && e.target.closest('[data-theme-toggle]'); if(!b) return; e.preventDefault();
+      var d=el.classList.toggle('theme-dark');
+      try{ localStorage.setItem('rd-theme', d?'dark':'light'); }catch(e){}
+    });
+    window.addEventListener('storage', function(e){ if(e.key==='rd-theme') el.classList.toggle('theme-dark', e.newValue==='dark'); });
+  }
+})();
+</script>
+</helmet>
+<div aria-hidden="true" style="position:fixed;inset:0;z-index:-1;background:var(--bg)"></div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <filter id="doodle"><feTurbulence type="turbulence" baseFrequency="0.018" numOctaves="2" seed="4" result="n"><animate attributeName="seed" values="3;7;11;3" dur="0.5s" repeatCount="indefinite"/></feTurbulence><feDisplacementMap in="SourceGraphic" in2="n" scale="3.2"/></filter>
+</defs></svg>
+
+<div style="position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:18px 40px;background:var(--nav);backdrop-filter:blur(10px);border-bottom:1px solid var(--hair)">
+  <a href="Home.dc.html" style="display:flex;align-items:center;gap:11px;text-decoration:none;font-family:var(--font-display);font-weight:800;font-size:20px;color:var(--ink);letter-spacing:-.02em">
+    <span style="width:32px;height:32px;border-radius:10px;background:var(--c-accent-purple);display:inline-flex;align-items:center;justify-content:center;font-size:15px;color:#fff">R</span>ruben.dev
+  </a>
+  <div style="display:flex;gap:24px;font-size:15px;font-weight:600;align-items:center"><button data-theme-toggle aria-label="Toggle dark mode" style="border:0;background:transparent;cursor:pointer;color:var(--ink-2);display:inline-flex;align-items:center;padding:2px;margin-right:2px" style-hover="color:var(--ink)"><svg class="icon-moon" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"/></svg><svg class="icon-sun" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.1 5.1l1.6 1.6M17.3 17.3l1.6 1.6M18.9 5.1l-1.6 1.6M6.7 17.3l-1.6 1.6"/></svg></button>
+    <a href="Home.dc.html" style="text-decoration:none;color:var(--ink-2)" style-hover="color:var(--ink)">Home</a>
+    <a href="Opinions.dc.html" style="text-decoration:none;color:var(--c-accent-purple)">Opinions</a>
+    <a href="Notes.dc.html" style="text-decoration:none;color:var(--ink-2)" style-hover="color:var(--ink)">Notes</a>
+    <a href="Contact.dc.html" style="text-decoration:none;color:var(--ink-2)" style-hover="color:var(--ink)">Contact</a>
+  </div>
+</div>
+
+<!-- HEADER -->
+<section style="background-image:radial-gradient(var(--dot) 1.5px,transparent 1.5px);background-size:26px 26px">
+  <div style="max-width:1080px;margin:0 auto;padding:56px 40px 30px;display:flex;align-items:center;justify-content:flex-start;gap:40px">
+    <div style="max-width:540px">
+      <div style="font-family:var(--font-body);font-weight:700;font-size:13px;letter-spacing:var(--tracking-eyebrow);text-transform:uppercase;color:var(--c-accent-purple);margin-bottom:16px">Opinions</div>
+      <h1 style="font-family:var(--font-display);font-weight:800;font-size:clamp(40px,6vw,64px);line-height:1.02;letter-spacing:-.03em;margin:0 0 6px;color:var(--ink)">Loud takes I actually hold.</h1>
+      <svg viewBox="0 0 320 24" width="320" style="display:block;max-width:100%">
+        <path filter="url(#doodle)" d="M6 14 Q90 4 170 13 T314 11" fill="none" style="stroke:var(--c-accent-pink)" stroke-width="5.5" stroke-linecap="round" stroke-dasharray="440" stroke-dashoffset="440"><animate attributeName="stroke-dashoffset" from="440" to="0" dur="1s" begin="0.3s" fill="freeze"/></path>
+      </svg>
+      <p style="font-size:19px;line-height:1.55;color:var(--ink-2);margin:22px 0 0;max-width:560px">Longer-form posts about the parts of this job nobody warns you about. Opinions, not gospel — argue back any time.</p>
+    </div>
+    <svg viewBox="0 0 150 190" width="300" style="flex:none;overflow:visible;animation:bobc 5s ease-in-out infinite" data-hero-doodle>
+      <g filter="url(#doodle)" fill="none" style="stroke:var(--ink)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="66" cy="52" r="20" style="fill:var(--surface)"/><circle cx="58" cy="50" r="2.2" style="fill:var(--ink)" stroke="none"/><circle cx="74" cy="50" r="2.2" style="fill:var(--ink)" stroke="none"/><path d="M56 62 Q66 70 76 62"/>
+        <path d="M66 72 L66 132"/><path d="M66 132 L48 180"/><path d="M66 132 L84 180"/><path d="M66 94 L44 120"/><path d="M66 90 L98 62"/>
+        <circle cx="106" cy="52" r="12" style="fill:var(--surface)"/><path d="M100 63 L112 63"/>
+        <g style="stroke:var(--c-accent-purple)" stroke-width="3"><path d="M106 30 L106 22"/><path d="M128 44 L135 39"/><path d="M84 44 L77 39"/><animate attributeName="opacity" values="1;.25;1" dur="1.3s" repeatCount="indefinite"/></g>
+      </g>
+    </svg>
+  </div>
+</section>
+
+<!-- POST LIST -->
+<section style="max-width:1080px;margin:0 auto;padding:24px 40px 60px;display:flex;flex-direction:column;gap:22px">
+
+  <a href="Post - The inferiority complex as a developer.dc.html" style="text-decoration:none;color:inherit;background:var(--surface);border-radius:26px;border:1px solid var(--hair);box-shadow:0 10px 30px rgba(19,15,13,.07);padding:30px 32px;display:flex;gap:26px;align-items:flex-start;transition:transform .2s ease,box-shadow .2s ease" style-hover="transform:translateY(-5px);box-shadow:0 20px 44px rgba(19,15,13,.14)">
+    <div style="flex:1">
+      <div style="display:flex;gap:14px;align-items:center;margin-bottom:12px;font-family:var(--font-mono);font-size:13px;color:var(--ink-3)">
+        <span style="color:var(--c-accent-purple);font-weight:600;text-transform:uppercase;letter-spacing:.1em;font-size:11px;border:1.5px solid var(--c-accent-purple);border-radius:999px;padding:3px 10px">Career</span>
+        <span>Apr 2026</span><span>·</span><span>7 min read</span>
+      </div>
+      <h2 style="font-family:var(--font-display);font-weight:800;font-size:30px;letter-spacing:-.02em;margin:0 0 10px;color:var(--ink)">The inferiority complex as a developer</h2>
+      <p style="font-size:16px;line-height:1.6;color:var(--ink-2);margin:0">Everyone around me seemed to just <em>know</em> things. Here's what I got wrong about that feeling — and what finally helped me put it down.</p>
+    </div>
+    <span style="flex:none;font-weight:700;color:var(--c-accent-purple);font-size:15px;align-self:center">Read →</span>
+  </a>
+
+  <a href="Post - The inferiority complex as a developer.dc.html" style="text-decoration:none;color:inherit;background:var(--surface);border-radius:26px;border:1px solid var(--hair);box-shadow:0 10px 30px rgba(19,15,13,.07);padding:30px 32px;display:flex;gap:26px;align-items:flex-start;transition:transform .2s ease,box-shadow .2s ease" style-hover="transform:translateY(-5px);box-shadow:0 20px 44px rgba(19,15,13,.14)">
+    <div style="flex:1">
+      <div style="display:flex;gap:14px;align-items:center;margin-bottom:12px;font-family:var(--font-mono);font-size:13px;color:var(--ink-3)">
+        <span style="color:var(--c-accent-pink);font-weight:600;text-transform:uppercase;letter-spacing:.1em;font-size:11px;border:1.5px solid var(--c-accent-pink);border-radius:999px;padding:3px 10px">Career</span>
+        <span>Mar 2026</span><span>·</span><span>5 min read</span>
+      </div>
+      <h2 style="font-family:var(--font-display);font-weight:800;font-size:30px;letter-spacing:-.02em;margin:0 0 10px;color:var(--ink)">Advice for Grad Ruben</h2>
+      <p style="font-size:16px;line-height:1.6;color:var(--ink-2);margin:0">A letter to myself on day one. What I'd tell the version of me who thought seniority was about knowing every answer.</p>
+    </div>
+    <span style="flex:none;font-weight:700;color:var(--c-accent-purple);font-size:15px;align-self:center">Read →</span>
+  </a>
+
+  <a href="Post - The inferiority complex as a developer.dc.html" style="text-decoration:none;color:inherit;background:var(--surface);border-radius:26px;border:1px solid var(--hair);box-shadow:0 10px 30px rgba(19,15,13,.07);padding:30px 32px;display:flex;gap:26px;align-items:flex-start;transition:transform .2s ease,box-shadow .2s ease" style-hover="transform:translateY(-5px);box-shadow:0 20px 44px rgba(19,15,13,.14)">
+    <div style="flex:1">
+      <div style="display:flex;gap:14px;align-items:center;margin-bottom:12px;font-family:var(--font-mono);font-size:13px;color:var(--ink-3)">
+        <span style="color:var(--c-accent-sky);font-weight:600;text-transform:uppercase;letter-spacing:.1em;font-size:11px;border:1.5px solid var(--c-accent-sky);border-radius:999px;padding:3px 10px">Ways of working</span>
+        <span>Feb 2026</span><span>·</span><span>6 min read</span>
+      </div>
+      <h2 style="font-family:var(--font-display);font-weight:800;font-size:30px;letter-spacing:-.02em;margin:0 0 10px;color:var(--ink)">AI supports. It does not decide.</h2>
+      <p style="font-size:16px;line-height:1.6;color:var(--ink-2);margin:0">Where I've let AI into my workflow, where I keep it out, and why the interesting decisions are still mine to make.</p>
+    </div>
+    <span style="flex:none;font-weight:700;color:var(--c-accent-purple);font-size:15px;align-self:center">Read →</span>
+  </a>
+
+  <div style="text-align:center;padding:20px 0;font-family:var(--font-mono);font-size:14px;color:var(--ink-3)">More opinions brewing — check back soon.</div>
+</section>
+
+<footer style="border-top:1px solid var(--hair);padding:36px 40px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px">
+  <div style="font-family:var(--font-display);font-weight:800;font-size:18px;color:var(--ink)">ruben.dev</div>
+  <div style="display:flex;gap:22px;font-family:var(--font-mono);font-size:14px">
+    <a href="mailto:hey@ruben.dev" style="text-decoration:none;color:var(--ink-2)" style-hover="color:var(--c-accent-purple)">email</a>
+    <a href="https://www.linkedin.com/in/ruben-de-beer-578b8a20b/" target="_blank" style="text-decoration:none;color:var(--ink-2)" style-hover="color:var(--c-accent-purple)">linkedin</a>
+    <a href="https://github.com/rubendebeer" target="_blank" style="text-decoration:none;color:var(--ink-2)" style-hover="color:var(--c-accent-purple)">github</a>
+  </div>
+  <div style="color:var(--ink-3);font-size:13px;font-family:var(--font-body)">© 2026 Ruben de Beer · notes &amp; opinions</div>
+</footer>
+</x-dc>
+</body>
+</html>
