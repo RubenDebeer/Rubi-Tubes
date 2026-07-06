@@ -28,11 +28,11 @@
 
       <div class="eyebrow">Contact</div>
       <h1 class="contact-h1">Say Howzit.</h1>
-      <p class="contact-sub">Helo me make a new friend and reach out. I won't bite</p>
+      <p class="contact-sub">Help me make a new friend and reach out. I won't bite.</p>
 
       <div class="channels-grid">
 
-        <a href="mailto:hey@ruben.dev" class="channel-card purple-hover">
+        <a href="mailto:rubendebeercoding@gmail.com" class="channel-card purple-hover">
           <span class="channel-icon purple-icon">
             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" style="stroke:var(--c-accent-purple)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/>
@@ -40,7 +40,7 @@
             </svg>
           </span>
           <div class="channel-label">Email</div>
-          <div class="channel-title">hey@ruben.dev</div>
+          <div class="channel-title">rubendebeercoding@gmail.com</div>
           <div class="channel-desc">Best for anything longer than a message.</div>
         </a>
 

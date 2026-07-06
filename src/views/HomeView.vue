@@ -13,7 +13,7 @@
             <animate attributeName="stroke-dashoffset" from="540" to="0" dur="1.1s" begin="0.4s" fill="freeze"></animate>
           </path>
         </svg>
-        <p class="hero-sub">I'm a software engineer. I break things, try to fix them, then write some of it down. Have a look at my notes, or don't I'm not your boss...</p>
+        <p class="hero-sub">I'm a software engineer. I break things, try to fix them, then write some of it down. Have a look at my notes, or don't. I'm not your boss...</p>
         <div class="hero-btns">
           <RouterLink to="/opinions" class="btn-primary">Read My Opinions →</RouterLink>
           <RouterLink to="/notes" class="btn-secondary">Browse Tech notes</RouterLink>
@@ -93,7 +93,7 @@
         </div>
         <div class="card-eyebrow purple">Opinions</div>
         <h3 class="card-h3">Loud takes I actually hold</h3>
-        <p class="card-body">Some of my opinions seem good some of the trash, I guess you will need to read them and form your own opinion. ;)</p>
+        <p class="card-body">Some of my opinions seem good, some are trash. I guess you will need to read them and form your own opinion. ;)</p>
         <span class="card-link">Give it a spec →</span>
       </RouterLink>
 
@@ -125,7 +125,7 @@
         </div>
         <div class="card-eyebrow purple">Notes</div>
         <h3 class="card-h3">Engineering notes long &amp; short</h3>
-        <p class="card-body">I have sever ADHD, which mean I like alot of things. Networking, Architecture, DevOps, Data , Api Design, Back en... Bla Bla Bla </p>
+        <p class="card-body">I have severe ADHD, which means I like a lot of things. Networking, Architecture, DevOps, Data, Api Design, Back en... Bla Bla Bla</p>
         <span class="card-link">Browse notes →</span>
       </RouterLink>
 
@@ -151,7 +151,7 @@
         </div>
         <div class="card-eyebrow purple">Contact</div>
         <h3 class="card-h3">Say howzit</h3>
-        <p class="card-body">Hopefully you disagree with some of my opinions, or worse agree maybe you just want to have a vet chat? Speck my deats and lets have a chat.</p>
+        <p class="card-body">Hopefully you disagree with some of my opinions, or worse, agree — maybe you just want to have a quick chat? Check my details and let's have a chat.</p>
         <span class="card-link">Get in touch →</span>
       </RouterLink>
 

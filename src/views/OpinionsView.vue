@@ -12,7 +12,7 @@
             <animate attributeName="stroke-dashoffset" from="440" to="0" dur="1s" begin="0.3s" fill="freeze"></animate>
           </path>
         </svg>
-        <p class="hero-sub">"Men are disturbed not by things, but by the views which they take of things."~ Some Smart Old Guy</p>
+        <p class="hero-sub">"Men are disturbed not by things, but by the views which they take of things." ~ Some Smart Old Guy</p>
       </div>
       <svg viewBox="0 0 150 190" width="300" style="flex:none;overflow:visible;animation:bobc 5s ease-in-out infinite" aria-hidden="true">
         <g filter="url(#doodle)" fill="none" style="stroke:var(--ink)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">

@@ -1,8 +1,8 @@
 <template>
   <footer class="footer">
-    <div class="wordmark">ruben.dev</div>
+    <div class="wordmark">Rubi Tubes</div>
     <div class="links">
-      <a href="mailto:hey@ruben.dev" class="footer-link">email</a>
+      <a href="mailto:rubendebeercoding@gmail.com" class="footer-link">email</a>
       <a href="https://www.linkedin.com/in/ruben-de-beer-578b8a20b/" target="_blank" rel="noopener" class="footer-link">linkedin</a>
       <a href="https://github.com/rubendebeer" target="_blank" rel="noopener" class="footer-link">github</a>
     </div>
