@@ -34,10 +34,14 @@ const route = useRoute()
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 18px 40px;
+  padding: 14px 20px;
   background: var(--nav);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--hair);
+}
+
+@media (min-width: 640px) {
+  .nav { padding: 18px 40px; }
 }
 
 .logo {
@@ -66,10 +70,14 @@ const route = useRoute()
 
 .nav-right {
   display: flex;
-  gap: 24px;
-  font-size: 15px;
+  gap: 16px;
+  font-size: 14px;
   font-weight: 600;
   align-items: center;
+}
+
+@media (min-width: 640px) {
+  .nav-right { gap: 24px; font-size: 15px; }
 }
 
 .theme-btn {

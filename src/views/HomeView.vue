@@ -13,16 +13,16 @@
             <animate attributeName="stroke-dashoffset" from="540" to="0" dur="1.1s" begin="0.4s" fill="freeze"></animate>
           </path>
         </svg>
-        <p class="hero-sub">I'm a software engineer. I break things, fix them, then write it all down — loud opinions over here, honest engineering notes over there.</p>
+        <p class="hero-sub">I'm a software engineer. I break things, try to fix them, then write some of it down, I have loud opinions over here, honest engineering notes over there..</p>
         <div class="hero-btns">
-          <RouterLink to="/opinions" class="btn-primary">Read my opinions →</RouterLink>
-          <RouterLink to="/notes" class="btn-secondary">Browse notes</RouterLink>
+          <RouterLink to="/opinions" class="btn-primary">Read My Opinions →</RouterLink>
+          <RouterLink to="/notes" class="btn-secondary">Browse Tech notes</RouterLink>
         </div>
       </div>
 
       <!-- Right: mascot -->
       <div class="mascot-wrap" data-mascot>
-        <div class="speech-bubble" style="animation:bobc 3.6s ease-in-out infinite">Awe.</div>
+        <div class="speech-bubble" style="animation:bobc 3.6s ease-in-out infinite">Oh Hi.</div>
         <!-- lightbulb doodle -->
         <svg viewBox="0 0 70 90" width="66" style="position:absolute;left:8px;bottom:150px;z-index:4;animation:bobc 5s ease-in-out infinite" aria-hidden="true">
           <g filter="url(#doodle)" fill="none" style="stroke:var(--ink)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
@@ -93,8 +93,8 @@
         </div>
         <div class="card-eyebrow purple">Opinions</div>
         <h3 class="card-h3">Loud takes I actually hold</h3>
-        <p class="card-body">Longer-form blog posts on being a developer, the messy parts of the job, and what I wish I'd known.</p>
-        <span class="card-link">Read the blog →</span>
+        <p class="card-body">Some of my opinions I have build over my career, the messy parts of the job, and what I wish I'd known.</p>
+        <span class="card-link">Give it a spec →</span>
       </RouterLink>
 
       <RouterLink to="/notes" class="feature-card">
@@ -124,7 +124,7 @@
           </svg>
         </div>
         <div class="card-eyebrow purple">Notes</div>
-        <h3 class="card-h3">Field notes, long &amp; short</h3>
+        <h3 class="card-h3">Engineering notes long &amp; short</h3>
         <p class="card-body">The stuff I keep coming back to — k8s, DNS, CI/CD, DLT, GitHub Actions. My working memory, in public.</p>
         <span class="card-link">Browse notes →</span>
       </RouterLink>
@@ -150,8 +150,8 @@
           </svg>
         </div>
         <div class="card-eyebrow purple">Contact</div>
-        <h3 class="card-h3">Say hi</h3>
-        <p class="card-body">Want to argue about one of my opinions, or just chat? Email, LinkedIn and GitHub all live here.</p>
+        <h3 class="card-h3">Say howzit</h3>
+        <p class="card-body">Want to argue about one of my opinions, or just have a vet chat? Email, LinkedIn and GitHub all live here.</p>
         <span class="card-link">Get in touch →</span>
       </RouterLink>
 
@@ -232,6 +232,15 @@ const recentItems = [
   gap: 20px;
 }
 
+@media (max-width: 767px) {
+  .hero-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: unset;
+    padding: 32px 20px 40px;
+  }
+}
+
 .hero-text {
   flex: 1;
   max-width: 620px;
@@ -309,6 +318,10 @@ const recentItems = [
   align-self: flex-end;
 }
 
+@media (max-width: 767px) {
+  .mascot-wrap { display: none; }
+}
+
 .speech-bubble {
   position: absolute;
   right: 8px;
@@ -328,13 +341,17 @@ const recentItems = [
 .find-section {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 40px 40px 20px;
+  padding: 40px 20px 20px;
+}
+
+@media (min-width: 640px) {
+  .find-section { padding: 40px 40px 20px; }
 }
 
 .find-h2 {
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: 38px;
+  font-size: clamp(28px, 5vw, 38px);
   letter-spacing: -.02em;
   margin: 0 0 28px;
   color: var(--ink);
@@ -342,8 +359,16 @@ const recentItems = [
 
 .cards-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 640px) {
+  .cards-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+}
+
+@media (min-width: 900px) {
+  .cards-grid { grid-template-columns: repeat(3, 1fr); gap: 24px; }
 }
 
 .feature-card {
@@ -406,7 +431,11 @@ const recentItems = [
 .recent-section {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 44px 40px 60px;
+  padding: 32px 20px 48px;
+}
+
+@media (min-width: 640px) {
+  .recent-section { padding: 44px 40px 60px; }
 }
 
 .recent-header {
@@ -443,14 +472,19 @@ const recentItems = [
   color: inherit;
   display: flex;
   align-items: center;
-  gap: 20px;
-  padding: 20px 6px;
+  gap: 12px;
+  padding: 16px 6px;
   border-bottom: 1px solid var(--hair);
   transition: background .15s ease, padding-left .15s ease;
+  flex-wrap: wrap;
 }
 .recent-row:hover {
   background: rgba(184,65,251,.05);
   padding-left: 16px;
+}
+
+@media (max-width: 639px) {
+  .recent-date { display: none; }
 }
 
 .pill {

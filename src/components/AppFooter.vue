@@ -13,12 +13,16 @@
 <style scoped>
 .footer {
   border-top: 1px solid var(--hair);
-  padding: 36px 40px;
+  padding: 28px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   gap: 16px;
+}
+
+@media (min-width: 640px) {
+  .footer { padding: 36px 40px; }
 }
 
 .wordmark {

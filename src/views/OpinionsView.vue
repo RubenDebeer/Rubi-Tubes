@@ -91,11 +91,20 @@ function pillStyle(post) {
 .hero-inner {
   max-width: 1080px;
   margin: 0 auto;
-  padding: 56px 40px 30px;
+  padding: 36px 20px 24px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 40px;
+}
+
+@media (min-width: 640px) {
+  .hero-inner { padding: 56px 40px 30px; }
+}
+
+@media (max-width: 767px) {
+  .hero-inner { flex-direction: column; }
+  .hero-inner > svg { display: none; }
 }
 
 .hero-text { max-width: 540px; }
@@ -131,24 +140,32 @@ function pillStyle(post) {
 .post-list {
   max-width: 1080px;
   margin: 0 auto;
-  padding: 24px 40px 60px;
+  padding: 16px 20px 48px;
   display: flex;
   flex-direction: column;
-  gap: 22px;
+  gap: 16px;
+}
+
+@media (min-width: 640px) {
+  .post-list { padding: 24px 40px 60px; gap: 22px; }
 }
 
 .post-card {
   text-decoration: none;
   color: inherit;
   background: var(--surface);
-  border-radius: 26px;
+  border-radius: 20px;
   border: 1px solid var(--hair);
   box-shadow: 0 10px 30px rgba(19,15,13,.07);
-  padding: 30px 32px;
+  padding: 22px 20px;
   display: flex;
   gap: 26px;
   align-items: flex-start;
   transition: transform .2s ease, box-shadow .2s ease;
+}
+
+@media (min-width: 640px) {
+  .post-card { border-radius: 26px; padding: 30px 32px; }
 }
 .post-card:hover {
   transform: translateY(-5px);
@@ -181,7 +198,7 @@ function pillStyle(post) {
 .post-title {
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: 30px;
+  font-size: clamp(22px, 4vw, 30px);
   letter-spacing: -.02em;
   margin: 0 0 10px;
   color: var(--ink);

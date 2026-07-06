@@ -88,8 +88,12 @@ import AppFooter from '../components/AppFooter.vue'
 .contact-inner {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 60px 40px 70px;
+  padding: 40px 20px 48px;
   text-align: center;
+}
+
+@media (min-width: 640px) {
+  .contact-inner { padding: 60px 40px 70px; }
 }
 
 .doodle-wrap {
@@ -145,9 +149,13 @@ import AppFooter from '../components/AppFooter.vue'
 
 .channels-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
+  grid-template-columns: 1fr;
+  gap: 14px;
   text-align: left;
+}
+
+@media (min-width: 640px) {
+  .channels-grid { grid-template-columns: repeat(3, 1fr); gap: 22px; }
 }
 
 .channel-card {

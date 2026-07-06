@@ -65,7 +65,11 @@ const pillStyle = computed(() => {
 .article-wrap {
   max-width: 760px;
   margin: 0 auto;
-  padding: 44px 32px 70px;
+  padding: 32px 20px 56px;
+}
+
+@media (min-width: 640px) {
+  .article-wrap { padding: 44px 32px 70px; }
 }
 
 article { width: 100%; }

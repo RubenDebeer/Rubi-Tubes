@@ -168,11 +168,20 @@ function notePillStyle(note) {
 .hero-inner {
   max-width: 1140px;
   margin: 0 auto;
-  padding: 56px 40px 30px;
+  padding: 36px 20px 24px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 40px;
+}
+
+@media (min-width: 640px) {
+  .hero-inner { padding: 56px 40px 30px; }
+}
+
+@media (max-width: 767px) {
+  .hero-inner { flex-direction: column; }
+  .hero-inner > svg { display: none; }
 }
 
 .hero-text { max-width: 560px; }
@@ -208,7 +217,11 @@ function notePillStyle(note) {
 .search-section {
   max-width: 1140px;
   margin: 0 auto;
-  padding: 14px 40px 0;
+  padding: 14px 20px 0;
+}
+
+@media (min-width: 640px) {
+  .search-section { padding: 14px 40px 0; }
 }
 
 .search-wrap {
@@ -264,12 +277,16 @@ function notePillStyle(note) {
 .chips-section {
   max-width: 1140px;
   margin: 0 auto;
-  padding: 14px 40px 0;
+  padding: 14px 20px 0;
   display: flex;
-  gap: 10px;
+  gap: 8px;
   flex-wrap: wrap;
   font-family: var(--font-mono);
   font-size: 13px;
+}
+
+@media (min-width: 640px) {
+  .chips-section { padding: 14px 40px 0; gap: 10px; }
 }
 
 .chip {
@@ -298,13 +315,25 @@ function notePillStyle(note) {
 .notes-section {
   max-width: 1140px;
   margin: 0 auto;
-  padding: 26px 40px 60px;
+  padding: 20px 20px 48px;
+}
+
+@media (min-width: 640px) {
+  .notes-section { padding: 26px 40px 60px; }
 }
 
 .notes-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+@media (min-width: 640px) {
+  .notes-grid { grid-template-columns: repeat(2, 1fr); gap: 18px; }
+}
+
+@media (min-width: 900px) {
+  .notes-grid { grid-template-columns: repeat(3, 1fr); gap: 22px; }
 }
 
 .note-card {
