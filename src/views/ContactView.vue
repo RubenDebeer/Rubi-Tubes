@@ -5,7 +5,7 @@
     <div class="contact-inner">
 
       <div class="doodle-wrap">
-        <div class="speech-bubble" style="animation:bobc 3.6s ease-in-out infinite">hey, you.</div>
+        <div class="speech-bubble" style="animation:bobc 3.6s ease-in-out infinite">Oh, hi.</div>
         <svg viewBox="0 0 170 210" width="200" style="overflow:visible;animation:bobc 5.5s ease-in-out infinite" aria-hidden="true">
           <path filter="url(#doodle)" d="M6 206 Q85 212 168 202" fill="none" style="stroke:var(--ink)" stroke-width="3.5" stroke-linecap="round"/>
           <g filter="url(#doodle)" fill="none" style="stroke:var(--ink)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">

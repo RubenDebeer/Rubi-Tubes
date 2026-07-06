@@ -13,7 +13,7 @@
             <animate attributeName="stroke-dashoffset" from="540" to="0" dur="1.1s" begin="0.4s" fill="freeze"></animate>
           </path>
         </svg>
-        <p class="hero-sub">I'm a software engineer. I break things, try to fix them, then write some of it down, I have loud opinions over here, honest engineering notes over there..</p>
+        <p class="hero-sub">I'm a software engineer. I break things, try to fix them, then write some of it down. Have a look at my notes, or don't I'm not your boss...</p>
         <div class="hero-btns">
           <RouterLink to="/opinions" class="btn-primary">Read My Opinions →</RouterLink>
           <RouterLink to="/notes" class="btn-secondary">Browse Tech notes</RouterLink>
