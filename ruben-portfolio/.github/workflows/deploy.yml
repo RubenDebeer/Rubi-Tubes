@@ -27,9 +27,7 @@ jobs:
           cache-dependency-path: package-lock.json
 
       - run: npm ci
-
-        # Set VITE_BASE to '/' if deploying to rubendebeer.github.io (user page),
-        # or '/<repo-name>/' for a project repo. Defaults to '/'.
+      
       - run: npm run build
         env:
           VITE_BASE: /
