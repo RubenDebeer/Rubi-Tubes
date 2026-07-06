@@ -5,7 +5,7 @@
     <div class="contact-inner">
 
       <div class="doodle-wrap">
-        <div class="speech-bubble" style="animation:bobc 3.6s ease-in-out infinite">Oh, hi.</div>
+        <div class="speech-bubble" style="animation:bobc 3.6s ease-in-out infinite">Awe, boet.</div>
         <svg viewBox="0 0 170 210" width="200" style="overflow:visible;animation:bobc 5.5s ease-in-out infinite" aria-hidden="true">
           <path filter="url(#doodle)" d="M6 206 Q85 212 168 202" fill="none" style="stroke:var(--ink)" stroke-width="3.5" stroke-linecap="round"/>
           <g filter="url(#doodle)" fill="none" style="stroke:var(--ink)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
@@ -27,8 +27,8 @@
       </div>
 
       <div class="eyebrow">Contact</div>
-      <h1 class="contact-h1">Say hi.</h1>
-      <p class="contact-sub">Want to argue about one of my opinions, ask about a note, or just talk shop? Pick whichever's easiest.</p>
+      <h1 class="contact-h1">Say Howzit.</h1>
+      <p class="contact-sub">Helo me make a new friend and reach out. I won't bite</p>
 
       <div class="channels-grid">
 

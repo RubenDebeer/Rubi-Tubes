@@ -12,7 +12,7 @@
             <animate attributeName="stroke-dashoffset" from="420" to="0" dur="1s" begin="0.3s" fill="freeze"></animate>
           </path>
         </svg>
-        <p class="hero-sub">My working memory, in public. Some are long walkthroughs, some are two-line reminders. All of them are things I've actually needed.</p>
+        <p class="hero-sub">Some notes. Not sure what the value add of personal notes are in the era of AI but they help me form opinions. So I just keep on keeping on.</p>
       </div>
       <svg viewBox="0 0 150 190" width="300" style="flex:none;overflow:visible;animation:bobc 5s ease-in-out infinite" aria-hidden="true">
         <g filter="url(#doodle)" fill="none" style="stroke:var(--ink)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
@@ -139,7 +139,7 @@ const filteredNotes = computed(() => {
 
 const resultMsg = computed(() => {
   const q = query.value
-  if (!q) return "That's everything so far — more notes land as I take them."
+  if (!q) return "That's It , These notes will be added by a skill as soon as I push the .md file for the notes. Cool ey ;)"
   const count = filteredNotes.value.length
   return `${count} note${count === 1 ? '' : 's'} tagged near "${q}"`
 })

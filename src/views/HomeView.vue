@@ -93,7 +93,7 @@
         </div>
         <div class="card-eyebrow purple">Opinions</div>
         <h3 class="card-h3">Loud takes I actually hold</h3>
-        <p class="card-body">Some of my opinions I have build over my career, the messy parts of the job, and what I wish I'd known.</p>
+        <p class="card-body">Some of my opinions seem good some of the trash, I guess you will need to read them and form your own opinion. ;)</p>
         <span class="card-link">Give it a spec →</span>
       </RouterLink>
 
@@ -125,7 +125,7 @@
         </div>
         <div class="card-eyebrow purple">Notes</div>
         <h3 class="card-h3">Engineering notes long &amp; short</h3>
-        <p class="card-body">The stuff I keep coming back to — k8s, DNS, CI/CD, DLT, GitHub Actions. My working memory, in public.</p>
+        <p class="card-body">I have sever ADHD, which mean I like alot of things. Networking, Architecture, DevOps, Data , Api Design, Back en... Bla Bla Bla </p>
         <span class="card-link">Browse notes →</span>
       </RouterLink>
 
@@ -151,7 +151,7 @@
         </div>
         <div class="card-eyebrow purple">Contact</div>
         <h3 class="card-h3">Say howzit</h3>
-        <p class="card-body">Want to argue about one of my opinions, or just have a vet chat? Email, LinkedIn and GitHub all live here.</p>
+        <p class="card-body">Hopefully you disagree with some of my opinions, or worse agree maybe you just want to have a vet chat? Speck my deats and lets have a chat.</p>
         <span class="card-link">Get in touch →</span>
       </RouterLink>
 
