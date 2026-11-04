@@ -3,7 +3,6 @@
 
   <!-- HERO -->
   <section class="hero-section">
-    <FloatingLogos />
     <div class="hero-inner">
       <!-- Left column -->
       <div class="hero-text">
@@ -136,7 +135,6 @@
 import { onMounted } from 'vue'
 import NavBar from '../components/NavBar.vue'
 import AppFooter from '../components/AppFooter.vue'
-import FloatingLogos from '../components/FloatingLogos.vue'
 
 const recentItems = [
   {
