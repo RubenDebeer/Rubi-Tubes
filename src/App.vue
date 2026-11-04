@@ -1,5 +1,5 @@
 <template>
-  <div aria-hidden="true" style="position:fixed;inset:0;z-index:-2;background:var(--bg)"></div>
+  <div aria-hidden="true" style="position:fixed;inset:0;z-index:-1;background:var(--bg)"></div>
   <FloatingLogos />
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
     <defs>

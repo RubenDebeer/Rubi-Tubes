@@ -130,14 +130,14 @@
 .floating-bg {
   position: fixed;
   inset: 0;
-  z-index: -1;
+  z-index: 1;
   pointer-events: none;
   overflow: hidden;
 }
 
 .fl {
   position: absolute;
-  opacity: 0.1;
+  opacity: 0.08;
 }
 
 @keyframes fl-a {
