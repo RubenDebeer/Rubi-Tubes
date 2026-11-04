@@ -161,22 +161,19 @@ import AppFooter from '../components/AppFooter.vue'
 .channel-card {
   text-decoration: none;
   color: inherit;
-  background: var(--surface);
   border-radius: 24px;
-  border: 1px solid var(--hair);
-  box-shadow: 0 10px 30px rgba(19,15,13,.07);
+  border: var(--border-thin) solid var(--ink);
+  box-shadow: var(--shadow-hard-md);
   padding: 28px;
   display: flex;
   flex-direction: column;
-  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  transition: transform .15s ease, box-shadow .15s ease;
 }
-.channel-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 44px rgba(19,15,13,.14);
-}
-.purple-hover:hover { border-color: var(--c-accent-purple); }
-.sky-hover:hover { border-color: var(--c-accent-sky); }
-.pink-hover:hover { border-color: var(--c-accent-pink); }
+.channel-card:hover  { transform: translate(-2px,-2px); box-shadow: var(--shadow-hard-lg); }
+.channel-card:active { transform: translate(3px,3px);   box-shadow: 1px 1px 0 var(--ink); }
+.purple-hover { background: var(--tint-purple); }
+.sky-hover    { background: var(--tint-sky); }
+.pink-hover   { background: var(--tint-pink); }
 
 .channel-icon {
   width: 52px;
@@ -187,9 +184,9 @@ import AppFooter from '../components/AppFooter.vue'
   justify-content: center;
   margin-bottom: 18px;
 }
-.purple-icon { background: rgba(184,65,251,.12); border: 2px solid var(--c-accent-purple); }
-.sky-icon { background: rgba(90,198,255,.12); border: 2px solid var(--c-accent-sky); }
-.pink-icon { background: rgba(249,102,180,.12); border: 2px solid var(--c-accent-pink); }
+.purple-icon { background: var(--surface); border: var(--border-thin) solid var(--ink); }
+.sky-icon    { background: var(--surface); border: var(--border-thin) solid var(--ink); }
+.pink-icon   { background: var(--surface); border: var(--border-thin) solid var(--ink); }
 
 .channel-label {
   font-family: var(--font-body);

@@ -70,15 +70,15 @@ import NavBar from '../components/NavBar.vue'
 import AppFooter from '../components/AppFooter.vue'
 import { opinions } from '../content/index.js'
 
-const tagColors = {
-  purple: 'var(--c-accent-purple)',
-  pink: 'var(--c-accent-pink)',
-  sky: 'var(--c-accent-sky)',
+const tagTints = {
+  purple: { bg: 'var(--tint-purple)', text: 'var(--text-purple)' },
+  pink:   { bg: 'var(--tint-pink)',   text: 'var(--text-pink)' },
+  sky:    { bg: 'var(--tint-sky)',    text: 'var(--text-sky)' },
 }
 
 function pillStyle(post) {
-  const c = tagColors[post.tagColor] || 'var(--c-accent-purple)'
-  return `color:${c};border-color:${c}`
+  const t = tagTints[post.tagColor] || tagTints.purple
+  return `background:${t.bg};color:${t.text};border-color:var(--ink)`
 }
 </script>
 
@@ -155,8 +155,8 @@ function pillStyle(post) {
   color: inherit;
   background: var(--surface);
   border-radius: 20px;
-  border: 1px solid var(--hair);
-  box-shadow: 0 10px 30px rgba(19,15,13,.07);
+  border: var(--border-thin) solid var(--ink);
+  box-shadow: var(--shadow-hard-md);
   padding: 22px 20px;
   display: flex;
   gap: 26px;
@@ -169,7 +169,7 @@ function pillStyle(post) {
 }
 .post-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 20px 44px rgba(19,15,13,.14);
+  box-shadow: var(--shadow-hard-lg);
 }
 
 .post-card-inner { flex: 1; }
@@ -190,7 +190,7 @@ function pillStyle(post) {
   text-transform: uppercase;
   letter-spacing: .1em;
   font-size: 11px;
-  border: 1.5px solid;
+  border: var(--border-thin) solid;
   border-radius: 999px;
   padding: 3px 10px;
 }
@@ -217,7 +217,9 @@ function pillStyle(post) {
   color: var(--c-accent-purple);
   font-size: 15px;
   align-self: center;
+  transition: transform .2s ease;
 }
+.post-card:hover .read-link { transform: translateX(6px); }
 
 .brewing {
   text-align: center;

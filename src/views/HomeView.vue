@@ -15,7 +15,7 @@
         </svg>
         <p class="hero-sub">I'm a software engineer. I break things, try to fix them, then write some of it down. Have a look at my notes, or don't. I'm not your boss...</p>
         <div class="hero-btns">
-          <RouterLink to="/opinions" class="btn-primary">Read My Opinions →</RouterLink>
+          <RouterLink to="/opinions" class="btn-primary">Read My Opinions <span class="btn-arrow">→</span></RouterLink>
           <RouterLink to="/notes" class="btn-secondary">Browse Tech notes</RouterLink>
         </div>
       </div>
@@ -61,99 +61,48 @@
     </div>
   </section>
 
+  <!-- MARQUEE -->
+  <div class="marquee-outer" aria-hidden="true">
+    <div class="marquee-band">
+      <div class="marquee-track">
+        <span>NETWORKING ✦ ARCHITECTURE ✦ DEVOPS ✦ DATA ✦ API DESIGN ✦ BACK END ✦ BLA BLA BLA ✦</span>
+        <span>NETWORKING ✦ ARCHITECTURE ✦ DEVOPS ✦ DATA ✦ API DESIGN ✦ BACK END ✦ BLA BLA BLA ✦</span>
+      </div>
+    </div>
+  </div>
+
   <!-- WHAT YOU'LL FIND -->
   <section class="find-section">
     <div class="eyebrow grey">What you'll find here</div>
     <h2 class="find-h2">Two things I can't stop doing.</h2>
     <div class="cards-grid">
 
-      <RouterLink to="/opinions" class="feature-card">
-        <div class="card-doodle-area">
-          <svg viewBox="0 0 150 190" width="118" style="overflow:visible" aria-hidden="true">
-            <g filter="url(#doodle)" fill="none" style="stroke:var(--ink)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="66" cy="52" r="20" style="fill:var(--surface)"></circle>
-              <circle cx="58" cy="50" r="2.2" style="fill:var(--ink)" stroke="none"></circle>
-              <circle cx="74" cy="50" r="2.2" style="fill:var(--ink)" stroke="none"></circle>
-              <path d="M56 62 Q66 70 76 62"></path>
-              <path d="M66 72 L66 132"></path>
-              <path d="M66 132 L48 180"></path>
-              <path d="M66 132 L84 180"></path>
-              <path d="M66 94 L44 120"></path>
-              <path d="M66 90 L98 62"></path>
-              <circle cx="106" cy="52" r="12" style="fill:var(--surface)"></circle>
-              <path d="M100 63 L112 63"></path>
-              <g style="stroke:var(--c-accent-purple)" stroke-width="3">
-                <path d="M106 30 L106 22"></path>
-                <path d="M128 44 L135 39"></path>
-                <path d="M84 44 L77 39"></path>
-                <animate attributeName="opacity" values="1;.25;1" dur="2s" calcMode="spline" keyTimes="0;0.5;1" keySplines=".37 0 .63 1;.37 0 .63 1" repeatCount="indefinite"></animate>
-              </g>
-            </g>
-          </svg>
-        </div>
-        <div class="card-eyebrow purple">Opinions</div>
-        <h3 class="card-h3">Loud takes I actually hold</h3>
-        <p class="card-body">Some of my opinions seem good, some are trash. I guess you will need to read them and form your own opinion. ;)</p>
-        <span class="card-link">Give it a spec →</span>
-      </RouterLink>
+      <div class="card-wrap reveal-up stagger-1">
+        <RouterLink to="/opinions" class="feature-card feature-card--purple">
+          <div class="card-eyebrow">Opinions</div>
+          <h3 class="card-h3">Loud takes I actually hold</h3>
+          <p class="card-body">Some of my opinions seem good, some are trash. I guess you will need to read them and form your own opinion. ;)</p>
+          <span class="card-link">Give it a spec <span class="card-arrow">→</span></span>
+        </RouterLink>
+      </div>
 
-      <RouterLink to="/notes" class="feature-card">
-        <div class="card-doodle-area">
-          <svg viewBox="0 0 150 190" width="118" style="overflow:visible" aria-hidden="true">
-            <g filter="url(#doodle)" fill="none" style="stroke:var(--ink)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="58" cy="50" r="19" style="fill:var(--surface)"></circle>
-              <circle cx="50" cy="48" r="2.2" style="fill:var(--ink)" stroke="none"></circle>
-              <circle cx="66" cy="48" r="2.2" style="fill:var(--ink)" stroke="none"></circle>
-              <path d="M49 60 Q58 67 67 60"></path>
-              <path d="M58 69 L58 128"></path>
-              <path d="M58 128 L42 176"></path>
-              <path d="M58 128 L74 176"></path>
-              <path d="M58 88 L40 112"></path>
-              <rect x="84" y="96" width="46" height="54" rx="6" style="fill:var(--surface)"></rect>
-              <g style="stroke:var(--c-accent-sky)" stroke-width="3">
-                <path d="M92 110 L122 110"></path>
-                <path d="M92 124 L118 124"></path>
-                <path d="M92 138 L112 138"></path>
-              </g>
-              <g>
-                <path d="M58 86 L96 116"></path>
-                <path d="M96 116 L110 108" style="stroke:var(--c-accent-pink)"></path>
-                <animateTransform attributeName="transform" type="translate" values="0 0; 2 2.5; 0 0; -2 1.5; 0 0" dur="2.2s" calcMode="spline" keyTimes="0;0.25;0.5;0.75;1" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1;.45 0 .55 1" repeatCount="indefinite"></animateTransform>
-              </g>
-            </g>
-          </svg>
-        </div>
-        <div class="card-eyebrow purple">Notes</div>
-        <h3 class="card-h3">Engineering notes long &amp; short</h3>
-        <p class="card-body">I have severe ADHD, which means I like a lot of things. Networking, Architecture, DevOps, Data, Api Design, Back en... Bla Bla Bla</p>
-        <span class="card-link">Browse notes →</span>
-      </RouterLink>
+      <div class="card-wrap reveal-up stagger-2">
+        <RouterLink to="/notes" class="feature-card feature-card--pink">
+          <div class="card-eyebrow">Notes</div>
+          <h3 class="card-h3">Engineering notes long &amp; short</h3>
+          <p class="card-body">I have severe ADHD, which means I like a lot of things. Networking, Architecture, DevOps, Data, Api Design, Back en... Bla Bla Bla</p>
+          <span class="card-link">Browse notes <span class="card-arrow">→</span></span>
+        </RouterLink>
+      </div>
 
-      <RouterLink to="/contact" class="feature-card">
-        <div class="card-doodle-area">
-          <svg viewBox="0 0 150 190" width="118" style="overflow:visible" aria-hidden="true">
-            <g filter="url(#doodle)" fill="none" style="stroke:var(--ink)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="68" cy="50" r="20" style="fill:var(--surface)"></circle>
-              <circle cx="60" cy="48" r="2.2" style="fill:var(--ink)" stroke="none"></circle>
-              <circle cx="76" cy="48" r="2.2" style="fill:var(--ink)" stroke="none"></circle>
-              <path d="M58 60 Q68 68 78 60"></path>
-              <path d="M68 70 L68 130"></path>
-              <path d="M68 130 L50 178"></path>
-              <path d="M68 130 L86 178"></path>
-              <path d="M68 92 L46 118"></path>
-              <g>
-                <path d="M68 88 L102 58"></path>
-                <circle cx="104" cy="55" r="4.5" style="fill:var(--surface)"></circle>
-                <animateTransform attributeName="transform" type="rotate" values="-3 68 88; -22 68 88; -3 68 88" dur="1.8s" calcMode="spline" keyTimes="0;0.5;1" keySplines=".37 0 .63 1;.37 0 .63 1" repeatCount="indefinite"></animateTransform>
-              </g>
-            </g>
-          </svg>
-        </div>
-        <div class="card-eyebrow purple">Contact</div>
-        <h3 class="card-h3">Say howzit</h3>
-        <p class="card-body">Hopefully you disagree with some of my opinions, or worse, agree — maybe you just want to have a quick chat? Check my details and let's have a chat.</p>
-        <span class="card-link">Get in touch →</span>
-      </RouterLink>
+      <div class="card-wrap reveal-up stagger-3">
+        <RouterLink to="/contact" class="feature-card feature-card--sky">
+          <div class="card-eyebrow">Contact</div>
+          <h3 class="card-h3">Say howzit</h3>
+          <p class="card-body">Hopefully you disagree with some of my opinions, or worse, agree — maybe you just want to have a quick chat? Check my details and let's have a chat.</p>
+          <span class="card-link">Get in touch <span class="card-arrow">→</span></span>
+        </RouterLink>
+      </div>
 
     </div>
   </section>
@@ -174,6 +123,7 @@
         <span class="pill" :style="item.pillStyle">{{ item.label }}</span>
         <span class="recent-title">{{ item.title }}</span>
         <span class="recent-date">{{ item.date }}</span>
+        <span class="recent-arrow">→</span>
       </RouterLink>
     </div>
   </section>
@@ -182,6 +132,7 @@
 </template>
 
 <script setup>
+import { onMounted } from 'vue'
 import NavBar from '../components/NavBar.vue'
 import AppFooter from '../components/AppFooter.vue'
 
@@ -192,7 +143,7 @@ const recentItems = [
     label: 'Note · Cheat sheet',
     title: 'How DNS resolution works',
     date: 'Jun 2026',
-    pillStyle: 'color:var(--c-accent-sky);border-color:var(--c-accent-sky)',
+    pillStyle: 'background:var(--tint-pink);color:var(--text-pink);border-color:var(--ink)',
   },
   {
     href: '/notes/kubernetes-architecture-from-scratch',
@@ -200,7 +151,7 @@ const recentItems = [
     label: 'Note · Long read',
     title: 'Kubernetes architecture, from scratch',
     date: 'May 2026',
-    pillStyle: 'color:var(--c-accent-sky);border-color:var(--c-accent-sky)',
+    pillStyle: 'background:var(--tint-sky);color:var(--text-sky);border-color:var(--ink)',
   },
   {
     href: '/opinions/the-inferiority-complex-as-a-developer',
@@ -208,9 +159,23 @@ const recentItems = [
     label: 'Opinion',
     title: 'The inferiority complex as a developer',
     date: 'Apr 2026',
-    pillStyle: 'color:var(--c-accent-purple);border-color:var(--c-accent-purple)',
+    pillStyle: 'background:var(--tint-purple);color:var(--text-purple);border-color:var(--ink)',
   },
 ]
+
+onMounted(() => {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+  const observer = new IntersectionObserver(
+    (entries) => entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('is-visible')
+        observer.unobserve(e.target)
+      }
+    }),
+    { threshold: 0.08 }
+  )
+  document.querySelectorAll('.reveal-up').forEach(el => observer.observe(el))
+})
 </script>
 
 <style scoped>
@@ -218,8 +183,8 @@ const recentItems = [
 .hero-section {
   position: relative;
   overflow: hidden;
-  background-image: radial-gradient(var(--dot) 1.5px, transparent 1.5px);
-  background-size: 26px 26px;
+  background-image: radial-gradient(var(--dot) 1.2px, transparent 1.2px);
+  background-size: 22px 22px;
 }
 
 .hero-inner {
@@ -247,15 +212,15 @@ const recentItems = [
 }
 
 .eyebrow {
-  font-family: var(--font-body);
-  font-weight: 700;
+  font-family: var(--font-mono);
+  font-weight: 600;
   font-size: 13px;
   letter-spacing: var(--tracking-eyebrow);
   text-transform: uppercase;
   margin-bottom: 20px;
 }
 .eyebrow.purple { color: var(--c-accent-purple); }
-.eyebrow.grey { color: var(--ink-3); margin-bottom: 8px; }
+.eyebrow.grey   { color: var(--ink-3); margin-bottom: 8px; }
 
 .hero-h1 {
   font-family: var(--font-display);
@@ -281,33 +246,49 @@ const recentItems = [
   flex-wrap: wrap;
 }
 
+/* Buttons — hard shadow + lift/press */
 .btn-primary {
   text-decoration: none;
   font-weight: 700;
   font-size: 16px;
-  border-radius: 999px;
-  padding: 15px 28px;
-  background: var(--c-accent-purple);
+  border-radius: 14px;
+  padding: 14px 26px;
+  background: var(--purple);
   color: #fff;
+  border: var(--border-thin) solid var(--ink);
+  box-shadow: var(--shadow-hard-sm);
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  transition: transform .18s ease, box-shadow .18s ease;
+  min-height: 44px;
+  transition: transform .15s ease, box-shadow .15s ease;
 }
-.btn-primary:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(184,65,251,.3); }
+.btn-primary:hover  { transform: translate(-2px,-2px); box-shadow: 6px 6px 0 var(--ink); }
+.btn-primary:active { transform: translate(3px,3px);   box-shadow: 1px 1px 0 var(--ink); }
 
 .btn-secondary {
   text-decoration: none;
   font-weight: 700;
   font-size: 16px;
-  border-radius: 999px;
-  padding: 15px 28px;
+  border-radius: 14px;
+  padding: 14px 26px;
   background: var(--surface);
   color: var(--ink);
-  border: 3px solid var(--ink);
-  transition: transform .18s ease;
+  border: var(--border-thin) solid var(--ink);
+  box-shadow: var(--shadow-hard-sm);
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  transition: transform .15s ease, box-shadow .15s ease;
 }
-.btn-secondary:hover { transform: translateY(-3px); }
+.btn-secondary:hover  { transform: translate(-2px,-2px); box-shadow: 6px 6px 0 var(--ink); }
+.btn-secondary:active { transform: translate(3px,3px);   box-shadow: 1px 1px 0 var(--ink); }
+
+.btn-arrow {
+  display: inline-block;
+  transition: transform .2s ease;
+}
+.btn-primary:hover .btn-arrow { transform: translateX(4px); }
 
 /* MASCOT */
 .mascot-wrap {
@@ -329,23 +310,53 @@ const recentItems = [
   z-index: 6;
   transform: rotate(4deg);
   background: var(--surface);
-  border: 3px solid var(--ink);
+  border: var(--border-thick) solid var(--ink);
   border-radius: 16px;
   padding: 7px 15px;
   font-family: var(--font-mono);
   font-weight: 600;
   font-size: 16px;
+  box-shadow: var(--shadow-hard-sm);
+}
+
+/* MARQUEE */
+.marquee-outer {
+  overflow: hidden;
+  margin: 28px 0;
+}
+
+.marquee-band {
+  overflow: hidden;
+  background: var(--purple);
+  border-top: var(--border-thick) solid var(--ink);
+  border-bottom: var(--border-thick) solid var(--ink);
+  padding: 14px 0;
+  transform: rotate(var(--tilt-left));
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  gap: 40px;
+  white-space: nowrap;
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 800;
+  color: #fff;
+  animation: marquee-scroll 26s linear infinite;
 }
 
 /* WHAT YOU'LL FIND */
 .find-section {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 40px 20px 20px;
+  padding: 60px 20px 20px;
 }
 
 @media (min-width: 640px) {
-  .find-section { padding: 40px 40px 20px; }
+  .find-section { padding: 60px 40px 20px; }
 }
 
 .find-h2 {
@@ -353,63 +364,70 @@ const recentItems = [
   font-weight: 800;
   font-size: clamp(28px, 5vw, 38px);
   letter-spacing: -.02em;
-  margin: 0 0 28px;
+  margin: 0 0 36px;
   color: var(--ink);
 }
 
 .cards-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 16px;
+  gap: 24px;
 }
 
 @media (min-width: 640px) {
-  .cards-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .cards-grid { grid-template-columns: repeat(2, 1fr); gap: 28px; }
 }
 
 @media (min-width: 900px) {
-  .cards-grid { grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .cards-grid { grid-template-columns: repeat(3, 1fr); gap: 32px; }
+}
+
+/* Wrapper handles the scroll-reveal; card handles the tilt */
+.card-wrap {
+  display: flex;
+  flex-direction: column;
 }
 
 .feature-card {
+  flex: 1;
   text-decoration: none;
-  color: inherit;
-  background: var(--surface);
-  border-radius: 26px;
-  border: 1px solid var(--hair);
-  box-shadow: 0 10px 30px rgba(19,15,13,.07);
-  padding: 26px;
+  color: var(--ink);
+  border: var(--border-thin) solid var(--ink);
+  border-radius: 22px;
+  box-shadow: var(--shadow-hard-md);
+  padding: 28px;
   display: flex;
   flex-direction: column;
-  transition: transform .2s ease, box-shadow .2s ease;
-}
-.feature-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 44px rgba(19,15,13,.14);
+  gap: 10px;
+  transition: transform .25s cubic-bezier(.3,1.5,.5,1), box-shadow .25s ease;
 }
 
-.card-doodle-area {
-  height: 150px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.feature-card--purple { background: var(--tint-purple); transform: rotate(var(--tilt-left)); }
+.feature-card--pink   { background: var(--tint-pink);   transform: rotate(var(--tilt-right)); }
+.feature-card--sky    { background: var(--tint-sky);    transform: rotate(var(--tilt-slight)); }
+
+.feature-card:hover {
+  transform: rotate(0) translateY(-8px) !important;
+  box-shadow: 10px 14px 0 var(--ink);
 }
 
 .card-eyebrow {
-  font-family: var(--font-body);
-  font-weight: 700;
+  font-family: var(--font-mono);
   font-size: 12px;
-  letter-spacing: var(--tracking-eyebrow);
+  font-weight: 600;
+  letter-spacing: .18em;
   text-transform: uppercase;
-  margin-bottom: 8px;
 }
-.card-eyebrow.purple { color: var(--c-accent-purple); }
+.feature-card--purple .card-eyebrow { color: var(--text-purple); }
+.feature-card--pink   .card-eyebrow { color: var(--text-pink); }
+.feature-card--sky    .card-eyebrow { color: var(--text-sky); }
 
 .card-h3 {
   font-family: var(--font-display);
-  font-weight: 700;
+  font-weight: 800;
   font-size: 24px;
-  margin: 0 0 8px;
+  line-height: 1.1;
+  margin: 0;
   color: var(--ink);
 }
 
@@ -417,15 +435,25 @@ const recentItems = [
   font-size: 15px;
   line-height: 1.5;
   color: var(--ink-2);
-  margin: 0 0 14px;
+  margin: 0;
+  flex: 1;
 }
 
 .card-link {
   margin-top: auto;
   font-weight: 700;
-  color: var(--c-accent-purple);
+  color: var(--ink);
   font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
+
+.card-arrow {
+  display: inline-block;
+  transition: transform .2s ease;
+}
+.feature-card:hover .card-arrow { transform: translateX(6px); }
 
 /* RECENTLY */
 .recent-section {
@@ -464,7 +492,7 @@ const recentItems = [
 .recent-list {
   display: flex;
   flex-direction: column;
-  border-top: 1px solid var(--hair);
+  border-top: var(--border-thin) solid var(--ink);
 }
 
 .recent-row {
@@ -472,15 +500,15 @@ const recentItems = [
   color: inherit;
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 16px 6px;
-  border-bottom: 1px solid var(--hair);
-  transition: background .15s ease, padding-left .15s ease;
+  gap: 14px;
+  padding: 18px 8px;
+  border-bottom: var(--border-thin) solid var(--ink);
+  transition: background .2s ease, padding-left .2s ease;
   flex-wrap: wrap;
 }
 .recent-row:hover {
-  background: rgba(184,65,251,.05);
-  padding-left: 16px;
+  background: var(--surface);
+  padding-left: 20px;
 }
 
 @media (max-width: 639px) {
@@ -494,7 +522,7 @@ const recentItems = [
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: .1em;
-  border: 1.5px solid;
+  border: var(--border-thin) solid;
   border-radius: 999px;
   padding: 4px 11px;
 }
@@ -512,5 +540,17 @@ const recentItems = [
   font-family: var(--font-mono);
   font-size: 13px;
   color: var(--ink-3);
+}
+
+.recent-arrow {
+  flex: none;
+  font-size: 20px;
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: opacity .15s ease, transform .15s ease;
+}
+.recent-row:hover .recent-arrow {
+  opacity: 1;
+  transform: translateX(0);
 }
 </style>

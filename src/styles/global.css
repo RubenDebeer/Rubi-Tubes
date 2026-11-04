@@ -8,7 +8,7 @@
   --ink-2: #4A4440;
   --ink-3: #9a968f;
   --hair: rgba(19,15,13,.10);
-  --dot: rgba(19,15,13,.06);
+  --dot: rgba(19,15,13,.08);
   --nav: rgba(251,250,247,.85);
 
   /* accents */
@@ -22,6 +22,23 @@
   --font-mono: "JetBrains Mono", "Cascadia Code", ui-monospace, Menlo, monospace;
 
   --tracking-eyebrow: 0.18em;
+
+  /* Design-system additions */
+  --purple: #9b2ee6;
+  --shadow-hard-sm: 4px 4px 0 var(--ink);
+  --shadow-hard-md: 6px 6px 0 var(--ink);
+  --shadow-hard-lg: 10px 10px 0 var(--ink);
+  --tilt-left: -1.5deg;
+  --tilt-right: 1.2deg;
+  --tilt-slight: -0.6deg;
+  --border-thin: 2px;
+  --border-thick: 3px;
+  --tint-purple: #f3e3ff;
+  --tint-pink: #ffe3f1;
+  --tint-sky: #ddf3ff;
+  --text-purple: #6a1fa0;
+  --text-pink: #a3195f;
+  --text-sky: #0b5f8a;
 }
 
 html.theme-dark {
@@ -31,8 +48,18 @@ html.theme-dark {
   --ink-2: #B8B4AE;
   --ink-3: #8C8985;
   --hair: rgba(243,243,240,.12);
-  --dot: rgba(243,243,240,.06);
+  --dot: rgba(243,243,240,.08);
   --nav: rgba(19,15,13,.82);
+  --purple: #c77dff;
+  --tint-purple: #3a2150;
+  --tint-pink: #4a1f33;
+  --tint-sky: #14354a;
+  --text-purple: #e3b8ff;
+  --text-pink: #ffb3d9;
+  --text-sky: #9edcff;
+  --shadow-hard-sm: 4px 4px 0 rgba(251,250,247,.7);
+  --shadow-hard-md: 6px 6px 0 rgba(251,250,247,.7);
+  --shadow-hard-lg: 10px 10px 0 rgba(251,250,247,.7);
 }
 
 /* ============================================================
@@ -76,10 +103,33 @@ html.theme-dark [data-theme-toggle] .icon-moon { display: none; }
   50% { transform: translateY(-8px); }
 }
 
+@keyframes rt-pop {
+  0%   { transform: scale(.6) rotate(-4deg); opacity: 0; }
+  100% { transform: scale(1)  rotate(0);     opacity: 1; }
+}
+
+@keyframes marquee-scroll { to { transform: translateX(-50%); } }
+
+/* Scroll reveal */
+.reveal-up {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity .5s ease, transform .5s ease;
+}
+.reveal-up.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.stagger-1 { transition-delay: 0ms; }
+.stagger-2 { transition-delay: 80ms; }
+.stagger-3 { transition-delay: 160ms; }
+
 @media (prefers-reduced-motion: reduce) {
   @keyframes bobc { 0%, 100% { transform: translateY(0); } }
   @keyframes bobs { 0%, 100% { transform: translateY(0); } }
   svg animate, svg animateTransform { display: none; }
+  .reveal-up { opacity: 1; transform: none; transition: none; }
+  .marquee-track { animation: none !important; }
 }
 
 /* ============================================================

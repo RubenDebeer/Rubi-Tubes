@@ -74,10 +74,12 @@
     <template v-if="filteredNotes.length > 0">
       <div class="notes-grid">
         <RouterLink
-          v-for="note in filteredNotes"
+          v-for="(note, i) in filteredNotes"
           :key="note.slug"
           :to="`/notes/${note.slug}`"
           class="note-card"
+          :class="`note-tilt-${i % 3}`"
+          :style="noteCardBg(note)"
         >
           <div class="note-card-top">
             <span class="pill" :style="notePillStyle(note)">{{ note.kind }}</span>
@@ -147,15 +149,20 @@ const resultMsg = computed(() => {
 const topicList = ['Storage', 'Data', 'Networking', 'Microservices', 'CI/CD', 'Scaling', 'Big Data', 'Architecture']
 const chips = [{ label: 'All', q: '' }, ...topicList.map(t => ({ label: t, q: t }))]
 
-const accentColors = {
-  sky: 'var(--c-accent-sky)',
-  purple: 'var(--c-accent-purple)',
-  pink: 'var(--c-accent-pink)',
+const tintMap = {
+  sky:    { bg: 'var(--tint-sky)',    text: 'var(--text-sky)' },
+  purple: { bg: 'var(--tint-purple)', text: 'var(--text-purple)' },
+  pink:   { bg: 'var(--tint-pink)',   text: 'var(--text-pink)' },
+}
+
+function noteCardBg(note) {
+  const t = tintMap[note.accentColor] || tintMap.sky
+  return { background: t.bg }
 }
 
 function notePillStyle(note) {
-  const c = accentColors[note.accentColor] || 'var(--c-accent-sky)'
-  return `color:${c};border-color:${c}`
+  const t = tintMap[note.accentColor] || tintMap.sky
+  return `background:${t.bg};color:${t.text};border-color:var(--ink)`
 }
 </script>
 
@@ -294,10 +301,11 @@ function notePillStyle(note) {
   border-radius: 999px;
   white-space: nowrap;
   cursor: pointer;
-  transition: background .15s ease, border-color .15s ease;
-  background: transparent;
+  transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+  background: var(--surface);
   color: var(--ink-2);
-  border: 1.5px solid var(--hair);
+  border: var(--border-thin) solid var(--ink);
+  box-shadow: 2px 2px 0 var(--ink);
   font-family: var(--font-mono);
   font-size: 13px;
 }
@@ -305,10 +313,11 @@ function notePillStyle(note) {
   background: var(--ink);
   color: var(--bg);
   font-weight: 600;
-  border-color: var(--ink);
+  box-shadow: 2px 2px 0 var(--purple);
 }
 .chip:hover:not(.active) {
-  border-color: var(--ink-2);
+  transform: translate(-1px,-1px);
+  box-shadow: 3px 3px 0 var(--ink);
 }
 
 /* NOTES GRID */
@@ -339,19 +348,21 @@ function notePillStyle(note) {
 .note-card {
   text-decoration: none;
   color: inherit;
-  background: var(--surface);
   border-radius: 22px;
-  border: 1px solid var(--hair);
-  box-shadow: 0 8px 24px rgba(19,15,13,.06);
+  border: var(--border-thin) solid var(--ink);
+  box-shadow: var(--shadow-hard-md);
   padding: 24px;
   display: flex;
   flex-direction: column;
   min-height: 210px;
-  transition: transform .2s ease, box-shadow .2s ease;
+  transition: transform .25s cubic-bezier(.3,1.5,.5,1), box-shadow .25s ease;
 }
+.note-tilt-0 { transform: rotate(var(--tilt-left)); }
+.note-tilt-1 { transform: rotate(var(--tilt-right)); }
+.note-tilt-2 { transform: rotate(var(--tilt-slight)); }
 .note-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 18px 40px rgba(19,15,13,.13);
+  transform: rotate(0) translateY(-8px) !important;
+  box-shadow: 10px 14px 0 var(--ink);
 }
 
 .note-card-top {
@@ -369,7 +380,7 @@ function notePillStyle(note) {
   letter-spacing: .1em;
   border-radius: 999px;
   padding: 3px 10px;
-  border: 1.5px solid;
+  border: var(--border-thin) solid;
 }
 
 .note-date {
